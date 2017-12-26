@@ -1,0 +1,7 @@
+<div>
+  hello {{ message }}
+</div>
+<p><input [(ngModel)]="isShow"  type="checkbox">是否显示详细信息</p>
+<p *ngIf="isShow" appMyDirective>隐藏起来的内容</p>
+<app-child [news]="msgToChild" (outer)="receive($event)"></app-child>
+<p>来自子组件的消息： {{ msgFromChild }}</p>
